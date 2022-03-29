@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Name: Nathan Chorlton
+        Date: March 8th, 2022
+        Assignment 3
+    -->
+    <link href="mill.css" rel="stylesheet" />
+    <link href="oform.css" rel="stylesheet" />
+    <script src="rb_formsubmit2.js"></script>
+</head>
+<body>
+    <img src="images/mc_logo.png" alt="Millenium Computers" id="logo" />
+
+    <form id="cOrder" action="http://www.mill_computers.com/order/process.cgi" method="post">
+        <fieldset id="customerInfo" >
+            <legend>Personal Information</legend>
+
+            <div class="row">            
+                <label for="name1">First Name*</label>
+                <input name="fName" id="name1" type="text" required/>
+            </div>
+
+            <div class="row">
+                <label for="name2">Last Name*</label>
+                <input name="fName" id="name2" type="text" required/>
+            </div>
+
+            <div class="row">
+                <label for="addy">Address*</label>
+                <input name="street" id="addy" type="text" required/>
+            </div>
+
+            <div class="row">
+                <label for="location">City*</label>
+                <input name="city" id="location" type="text" required/>
+            </div>
+
+            <div class="row">
+                <label for="location">Province*</label>
+                <input name="province" id="location" type="text" required/>
+            </div>
+
+            <div class="row">
+                <label for="postalCode">Postal Code*</label>
+                <input name="postcode" id="postalCode" type="text" pattern="^\d{5}(-\d{4})?$" required
+                placeholder="nnnnn (-nnnn)" />
+            </div>
+
+            <div class="row">
+                <label for="phoneNumber">Phone*</label>
+                <input name="phone" id="phoneNumber" type="tel" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required
+                placeholder="(nnn) nnn-nnnn" />
+            </div>
+        </fieldset>
+
+        <fieldset id="computerInfo">
+            <legend>Computer Specs</legend>
+
+            <div class="row">
+                <label for="processor">Processor Speed</label>
+                <select name="pSpeed" id="processor" size="1">
+                    <option value="3.2GHZ">3.2 GHz</option>
+                    <option value="4.0GHZ">4.0 GHz</option>
+                    <option value="5.2GHZ">5.2 GHz</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label for="memory">Memory</label>
+                <select name="mem" id="memeory" size="1" >
+                    <option value="1GB">1 GB</option>
+                    <option value="2GB">2 GB</option>
+                    <option value="4GB">4 GB</option>
+                    <option value="8GB">8 GB</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label for="monitorSzie">Monitor Size</label>
+                <select name="monitor" id="monitorSize" size="1" >
+                    <option value="15">15"</option>
+                    <option value="17">17"</option>
+                    <option value="19">19"</option>
+                    <option value="21">21"</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label for="diskSpace">Hard Drive</label>
+                <select name="hd" id="diskSpace" size="1" >
+                    <option value="240GB">240 GB</option>
+                    <option value="500GB">500 GB</option>
+                    <option value="750GB">750 GB</option>
+                    <option value="1TB">1 TB</option>
+                </select>
+            </div>
+            
+            <div class="row">
+                <label>DVD Burner</label>
+                <fieldset class="optGroup" >
+                    <input name="dvd" id="dYes" value="yes" type="radio" />
+                    <label for="fYes">Yes</label>
+                    <input name="dvd" id="dNo" value="no" type="radio" />
+                    <label for="fNo">No</label>
+                </fieldset>
+            </div>
+
+            <div class="row">
+                <label>LAN Card</label>
+                <fieldset class="optGroup" >
+                    <input name="tuner" id="lYes" value="yes" type="radio" />
+                    <label for="lYes">Yes</label>
+                    <input name="tuner" id="lNo" value="no" type="radio" />
+                    <label for="lNo">No</label>
+                </fieldset>
+            </div>
+
+            <div class="row">
+                <label>Media Card Reader</label>
+                <fieldset class="optGroup" >
+                    <input name="mCard" id="mYes" value="yes" type="radio" />
+                    <label for="mYes">Yes</label>
+                    <input name="mCard" id="mNo" value="no" type="radio" />
+                    <label for="mNo">No</label>
+                </fieldset>
+            </div>
+
+        </fieldset>
+
+        <div>
+            <label for="checkBox">Would you like 24-month extended warranty?</label>
+            <input type="checkbox" id="check" name="checkBox" value="" >
+        </div>
+
+        <div class="feedback">
+            <label for="commBox">Tell us more about your order!<br></label>
+            <textarea name="custEXP" id="commBox"></textarea>
+        </div>
+
+        <div id="buttons">
+            <input type="submit" value="Send Order" />
+            <input type="reset" value="Cancel Order"/>
+            <input type="button" value="Contact Me" />
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Assignment 3
+   
+   Author: Nathan Chorlton
+   Date:   Mar 8th, 2022
+
+   Filename: oform.css
+*/
+
+/* Form styles */
+form#cOrder {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+}
+
+form#cOrder > fieldset {
+   background-color: rgb(173, 173, 173);
+   border-radius: 20px;
+   -webkit-flex: 1 1 300px;
+   flex: 1 1 300px;
+   font-size: 0.85em;
+   padding: 10px;
+   margin: 10px;
+}
+
+div.row {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   margin: 7px 0px;
+}
+
+div.row > * {
+   -webkit-flex: 1 1 150px;
+   flex: 1 1 150px;
+}
+
+legend {
+   background-color: black;
+   color: white;
+   padding: 5px;
+   font-size: 15px;
+}
+
+/* Other Styles */
+
+div {
+   margin: auto;
+   padding: 15px;
+}
+
+div#buttons {
+   padding: 20px;
+   text-align: center;
+   width: 100%;
+}
+
+div.feedback {
+   text-align: center;
+}
+
+textarea {
+   height: 60px;
+   width: 300px;
+}
+
+/* Validation Styles */
+
+input:focus, select:focus, textarea:focus {
+   background-color: rgb(255, 255, 180);
+}
+
+input#phoneNumber:focus:valid, input#postalCode:focus:valid {
+   background: rgb(220, 255, 220) url("images/mc_go.png") bottom right/contain no-repeat;
+
+}
+
+input#phoneNumber:focus:invalid, input#postalCode:focus:invalid {
+   background: rgb(255, 230, 230) url("images/mc_stop.png") bottom right/contain no-repeat;
+}
