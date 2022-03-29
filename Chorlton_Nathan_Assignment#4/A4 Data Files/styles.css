@@ -1,0 +1,43 @@
+/* Assignment 4 Splash Screen using JS
+author: Nathan Chorlton
+date: mar 24th, 2022
+
+This style sheet is to make the appperance simple and 
+match the color of the logo provided
+
+/* HTML styles */
+html {
+    background-color: lavender;
+    height: 100%;
+}
+/* Body Styles */
+body {
+    width: 80%;
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0px auto;
+    box-shadow: rgb(51, 51, 51) 5px 0px 15px,
+    rgb(51, 51, 51) -5px 0px 15px;
+}
+
+/* Image styles */ 
+
+img {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+/* Div styles */
+
+div {
+    border: 5px outset grey;
+    background-color: yellow;
+    text-align: center;
+    margin: 60px;
+}
+
+h1 {
+    color: purple;
+}
