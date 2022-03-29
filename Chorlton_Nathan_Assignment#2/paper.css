@@ -1,0 +1,159 @@
+@charset "utf-8";
+/*
+
+   Park City Gazette Style Sheet
+   Author: Nathan Chorlton
+   Date:   Febuary 11th, 2022
+
+   Filename: paper.css
+   
+
+*/
+
+/* html styles */
+
+html {
+	/*tiled background*/
+	background-image: url("parch2.jpg");
+	background-repeat: repeat-y repeat-x;
+}
+
+/* Body styles */
+
+body {
+	background-image: url("parch.jpg");
+	
+	/*Example of min and max width*/
+	min-width: 640px;
+	max-width: 960px;
+	
+	margin: 0px auto 0px auto;
+	
+	width: auto;
+	
+	box-shadow: 10px 10px 25px rgb(71, 71, 71), -10px -10px 25px rgb(71, 71, 71);
+	
+}
+
+p {
+	margin: 10px;
+}
+
+body h1, p {
+	padding: 10px; 
+}
+
+/* Image sytles */
+
+header > img {
+	
+	/*display property */
+	display: block;
+	/* example of width property*/
+	width: 100%;
+}
+
+img#Blake, img#Cougar {
+	display: block;
+	/*Example of float*/
+	float: left;
+	padding: 10px;
+	
+}
+
+/* Heading Styles*/
+
+h1 {
+	padding-left: 20px;
+	text-shadow: 0px 0px 3px black;
+} 
+
+/* Aside styles */
+
+aside#Stories {
+	float: right;
+	background-image: radial-gradient(rgb(245, 188, 66), rgb(245, 132, 66));
+	margin: 10px;
+	/* example of rounded corners*/
+	border-radius: 15px;
+	text-align: center;
+	border: 2px solid black;
+}
+
+aside#Stories > ul > li {
+	text-align: left;
+	
+	/**example of padding spaces*/
+	padding-right: 20px;
+	
+}
+
+aside#Cougar {
+	/*example of display property*/
+	display: block;
+	/*example of margin spaces */
+	margin: 20px;
+	
+	float: center;
+	background-image: radial-gradient(rgb(245, 188, 66), rgb(245, 132, 66));
+	/*Example of border style*/
+	border-style: dotted;
+	border-radius: 10px;
+
+}
+
+aside#Cougar > h2 {
+	text-align: center;
+}
+
+/* list styles */
+
+aside#Stories ul {
+	list-style-type: none;
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+/* link styles */
+
+a {
+	text-decoration: none;
+}
+
+/* Footer Styles */
+
+footer {
+	/*Example of clear*/
+	clear: both;
+	/*Example of progressive enhancement*/
+	background-color: rgb(235, 177, 131); 
+    background-color: hsl(27, 72%, 72%); 
+	display: block;
+	
+}
+
+section {
+	/* Example of relative positioning */
+	position: relative;
+	top: 50px;
+	
+	
+}
+
+footer > nav.vertical, footer > section {
+	float: left;
+	width: 25%;
+	/*Example of height property*/
+	height: auto;
+	list-style-type: none;
+	text-decoration: none;
+	
+}
+
+footer::after {
+	clear: both;
+	content: "";
+	display: table;
+}
